@@ -1,3 +1,4 @@
+// Assigning values for lights
 int pinA = 13;
 int pinB = 12;
 int pinC = 11;
@@ -6,10 +7,9 @@ int pinE = 9;
 int pinF = 8;
 int pinG = 7;
 int pinH = 6;
-int fan = A5;
 
 void setup() {
-  // This sets up the 
+  // This sets up the lights to be turned on
   pinMode(pinA, OUTPUT);
   pinMode(pinB, OUTPUT);
   pinMode(pinC, OUTPUT);
@@ -18,8 +18,8 @@ void setup() {
   pinMode(pinF, OUTPUT);
   pinMode(pinG, OUTPUT);
   pinMode(pinH, OUTPUT);
-  pinMode(fan, OUTPUT);
 
+  // This defaults all lights to off
   digitalWrite(pinA, LOW);
   digitalWrite(pinB, LOW);
   digitalWrite(pinC, LOW);
@@ -28,15 +28,13 @@ void setup() {
   digitalWrite(pinF, LOW);
   digitalWrite(pinG, LOW);
   digitalWrite(pinH, LOW);
-  digitalWrite(fan, HIGH);
 }
 
 void loop() {
-  digitalWrite(fan, HIGH);
-
+  // For each section, it turns on the lights for the spot where it should be
   digitalWrite(pinA, HIGH);
   digitalWrite(pinB, HIGH);
-  delay(100);
+  delay(100);                // 100 milliseconds
 
   digitalWrite(pinA, LOW);
   digitalWrite(pinB, HIGH);
